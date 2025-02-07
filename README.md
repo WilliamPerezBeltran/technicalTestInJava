@@ -1,71 +1,88 @@
-# technicalTestInJava
+# Interview Screening Test - Full Stack Developer
 
-# Question 1
+## Java Version
+This project uses **OpenJDK 17.0.12**:
 
-Write a method that takes 2 parameters. The first parameter is an array of integers that has already been sorted from smallest to largest. The second parameter is an integer. The method should return the number of times the second parameter appears in the first parameter.
-
-### Example:
-If the first parameter is `[1, 2, 3, 3, 4, 5]` and the second parameter is `3`, the method should return `2`.
-
-## Part 1: Explain Your Algorithm
-## Part 2: Please implement the method in Java.
-
-# Question 2
-
-Assume you are climbing a staircase of 10 steps. Also, assume that you can only take 1 or 2 steps each time you move up the stairs. Below is an example of two different ways you can climb the staircase.
-
-- 1, 1, 2, 2, 1, 2, 1  
-- 2, 2, 2, 2, 2
-
-Write an algorithm to calculate the total number of unique ways we can climb the staircase.
-
-### Part 1: 
-If you do a google search on this problem, you will find that one of the solutions uses the Fibonacci sequence. Explain how this solution works. You do not need to write any code.
-
-### Part 2:
-If we do not use Fibonacci sequence solution, how could we solve this problem? Please explain your algorithm.
-
-
-# Question 3
-
-Assume that someone is giving you the following requirements for developing a REST API with 2 endpoints.
-
-## Endpoint 1: Create Car Entry (POST)
-## Type POST
-**URL:** /cars  
-**Description:** Create a car entry
-
-### Request:
-```json
-{
-    "model": "Honda Civic",
-    "year": 2020
-}
+```
+openjdk 17.0.12 2024-07-16
+OpenJDK Runtime Environment (build 17.0.12+7-Ubuntu-1ubuntu220.04)
+OpenJDK 64-Bit Server VM (build 17.0.12+7-Ubuntu-1ubuntu220.04, mixed mode, sharing)
 ```
 
-### Response:
-```json
-{
-    "id": 1
-}
+## Project Structure
+```
+.
+├── interviewScreeningTest
+│   └── interview_screening_test_FullStackDeveloper.docx
+├── Question-1
+│   ├── lessOptimalApproach
+│   │   ├── explanation.md
+│   │   ├── Response.class
+│   │   └── Response.java
+│   ├── mostOptimalResponse
+│   │   ├── explanation.md
+│   │   └── Response.java
+│   └── ResponseTest.java
+├── Question-2
+│   ├── part-1.md
+│   ├── part-2.md
+│   ├── Response.class
+│   ├── Response.java
+│   ├── ResponseTest.class
+│   └── ResponseTest.java
+├── Question-3
+│   ├── part-1.md
+│   └── part-2.md
+├── Question-4
+│   └── response.md
+└── README.md
 ```
 
-## Endpoint 2: Retrieve Car Details (GET)
-**URL:** /cars/{id}  
-**Description:** Retrieve car details using the provided ID (the ID is the same as the one from the response of the POST request)
+### Location of the question paper
+- The document with all the questions is located in the folder interviewScreeningTest
 
-### Response:
-```json
-{
-    "model": "Honda Civic",
-    "year": 2020
-}
-```
 
-## API Implementation Details:
-The microservice will store the car data in a database. The id of each car entry is the primary key of the record in the table.
+## Explanation of Solutions
 
-##Part 1: What additional information do you need before you begin coding this?
-##Part 2: Make some assumptions for the questions that you came up with in part 1. 
-Create a list of test scenarios for the requirements listed above. Be sure to indicate what the input and expected output should be for each test.
+### Question 1: Counting Occurrences in an Array
+- **Less Optimal Approach:** Uses a simple loop to count occurrences. The solution is in `Response.java` inside `lessOptimalApproach/`.
+- **Most Optimal Approach:** Uses **Binary Search** to find occurrences more efficiently. The optimized version is in `mostOptimalResponse/`.
 
+#### Test File:
+The correctness of both solutions is verified in `Question-1/ResponseTest.java`.
+
+### Question 2: Climbing Stairs Problem
+- **Part 1:** Explains the **Fibonacci-based** approach to solve the problem.
+- **Part 2:** Implements the optimal dynamic programming solution in `Response.java`.
+
+#### Test File:
+The test cases are in `Question-2/ResponseTest.java`.
+
+### Question 3: Problem Description
+This section contains `part-1.md` and `part-2.md`, which explain and implement the required solutions.
+
+### Question 4: General Response
+The `response.md` file contains answers related to Question 4.
+
+## How to Run the Project
+
+1. Clone the repository:
+   ```
+   git clone <repository_url>
+   cd <repository_folder>
+   ```
+
+2. Compile and run Java files example:
+   ```
+   javac Question-1/mostOptimalResponse/Response.java
+   java Question-1/mostOptimalResponse/Response
+   ```
+
+3. Run tests:
+   ```
+   javac Question-1/ResponseTest.java
+   java Question-1/ResponseTest.java
+   ```
+
+## Author
+**Engineer William Perez**
