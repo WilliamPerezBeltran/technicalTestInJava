@@ -8,4 +8,5 @@ Write a method that takes 2 parameters. The first parameter is an array of integ
 If the first parameter is `[1, 2, 3, 3, 4, 5]` and the second parameter is `3`, the method should return `2`.
 
 ## Part 1: Explain Your Algorithm
+## Part 2: Please implement the method in Java.
 

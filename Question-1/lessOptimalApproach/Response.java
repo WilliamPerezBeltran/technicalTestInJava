@@ -1,3 +1,5 @@
+package lessOptimalApproach;
+
 public class Response{
 	
 	public static int occurrences(int[] arr, int number) {
