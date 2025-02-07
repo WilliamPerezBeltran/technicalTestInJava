@@ -1,0 +1,5 @@
+## Explanation to solve the problem using the Fibonacci sequence
+
+To solve this problem, imagine you're climbing a staircase with 10 steps, and you can only take 1 or 2 steps at a time. The question is: how many different ways can you climb the staircase? To answer this, we need to think about how you can reach each step. For the first step, there is only one way to get there: take 1 step. For the second step, you can either take two 1-steps or one 2-step. These are the first two ways to climb.
+
+From the third step onwards, you can reach it by either taking 1 step from the previous step or 2 steps from two steps below. This means the number of ways to get to each step is the sum of the ways to reach the two previous steps. This is similar to the Fibonacci sequence, where each number is the sum of the two numbers before it. Using this pattern, we can find the total number of ways to reach the 10th step.
